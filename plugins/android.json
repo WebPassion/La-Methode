@@ -1,0 +1,49 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "fr.Stevensssss.LaMethode"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "fr.Stevensssss.LaMethode"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "fr.Stevensssss.LaMethode"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "fr.Stevensssss.LaMethode"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "fr.Stevensssss.LaMethode"
+        },
+        "cordova-plugin-insomnia": {
+            "PACKAGE_NAME": "fr.Stevensssss.LaMethode"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "fr.Stevensssss.LaMethode"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "fr.Stevensssss.LaMethode"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "fr.Stevensssss.LaMethode"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "fr.Stevensssss.LaMethode"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "fr.Stevensssss.LaMethode"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "fr.Stevensssss.LaMethode"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/stevens/Dropbox/Apps Laffay/La Methode/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="6e34eae30a3a296ab402f5f2471c4b88181ad264">
+        <dex dex="/home/stevens/Dropbox/Apps Laffay/La Methode/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_b9edbd8799afb4f0c382edf059fadf80d711f2ef.jar" />
+    </item>
+    <item
+        jar="/home/stevens/Dropbox/Apps Laffay/La Methode/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="6e34eae30a3a296ab402f5f2471c4b88181ad264">
+        <dex dex="/home/stevens/Dropbox/Apps Laffay/La Methode/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_b9edbd8799afb4f0c382edf059fadf80d711f2ef.jar" />
+    </item>
+
+</items>

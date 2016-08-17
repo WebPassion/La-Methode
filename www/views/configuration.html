@@ -1,0 +1,17 @@
+<ion-view view-title="Configuration">
+    <ion-content>        
+        <div class="list">
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">Identifiant musculaction</span>
+				<input type="text" ng-model="idMuscu" placeholder="adresse@email.com">
+			</label>
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">Mot de passe musculaction</span>
+    			<input type="password" ng-model="passMuscu">
+			</label>
+			<button class="button button-full button-positive" ng-click="valider();">Valider</button>
+			<button class="button button-full button-dark" ng-click="importer();">Importer</button>
+			<button class="button button-full button-dark" ng-click="exporter();">Exporter</button>
+		</div>
+    </ion-content>
+</ion-view>

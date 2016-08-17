@@ -1,0 +1,49 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.lafay301096"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.lafay301096"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.lafay301096"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.lafay301096"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.ionicframework.lafay301096"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.lafay301096"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.lafay301096"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.lafay301096"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.lafay301096"
+        },
+        "cordova-plugin-insomnia": {
+            "PACKAGE_NAME": "fr.Stevensssss.LaMethode"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "fr.Stevensssss.LaMethode"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.lafay301096"
+        }
+    }
+}

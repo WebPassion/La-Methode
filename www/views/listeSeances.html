@@ -1,0 +1,11 @@
+<ion-view view-title="Vos séances" ng-init="chargerSeance()">
+    <ion-content>    	
+        <a class="button button-full button-positive" ui-sref="creerSeance({type: typeSeance})">Créer une séance</a>
+        <div class="liste" ng-repeat="seance in seances">
+            <a class="effacer ion-trash-a" ng-click="delete(seance.nomFichier)">&nbsp;</a>
+            <a class="modifier ion-settings" ui-sref="editerSeance({type:typeSeance, nom:seance.nomFichier})">&nbsp;</a>
+            <a class="voir ion-arrow-graph-up-right" ui-sref="voirSeances({type:typeSeance, nom:seance.nom})">&nbsp;</a>
+            <a ui-sref="effectuerSeance({type:typeSeance, nom:seance.nomFichier})">-> {{seance.nom}} <-</a>
+        </div> 
+    </ion-content>
+</ion-view>

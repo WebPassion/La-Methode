@@ -1,0 +1,10 @@
+<ion-view view-title="Vos exercices" ng-init="chargerSeance()">
+    <ion-content>    	
+        <a class="button button-full button-positive" ui-sref="creerExercice">Créer un exercice</a>
+        <div class="liste" ng-repeat="exo in exercices">
+        	<a class="effacer ion-trash-a" ng-click="delete(exo.nomFichier)">&nbsp;</a>
+        	<a class="modifier ion-settings" ui-sref="modifierExercice({nom:exo.nomFichier})">&nbsp;</a>
+        	<span>{{exo.nom}}</span>
+        </div> 
+    </ion-content>
+</ion-view>

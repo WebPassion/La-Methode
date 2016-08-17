@@ -1,0 +1,83 @@
+<ion-view view-title="Editer une séance" ng-init="init()">
+    <ion-content class="padding">       
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" ng-model="seance.nom" placeholder="Nom de la séance">
+            </label>
+            <div ng-show="afficherForm">
+                <label class="item item-input item-select">
+                    <div class="input-label">Choix de l'exercice</div>
+                    <select ng-model="exercice.exoChoisi" ng-options="exo.nom for exo in allExos"></select>
+                </label>
+                <div ng-if="type == 'Musculation'">
+                    <!--<label class="item item-input item-select">
+                        <div class="input-label">Groupe de l'exercice</div>
+                        <select ng-model="exercice.groupeChoisi" ng-options="groupe for groupe in groupes"></select>
+                    </label>-->
+                    <label class="item item-input">
+                        <span class="input-label">Nombre de série</span>
+                        <input type="number" ng-model="exercice.nbSeries" style="text-align: right;">
+                    </label>                
+                    <label class="item item-input">
+                        <span class="input-label">Nb reps</span>
+                        <input type="number" ng-model="exercice.nbReps" style="text-align: right;">
+                    </label>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Type d'evolution</div>
+                        <select ng-model="exercice.typeEvolution">
+                            <option value="mode">Mode</option>
+                            <option value="max">Max</option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Type de série</div>
+                        <select ng-model="exercice.typeSerie">
+                            <option value="serieNormales">Normales</option>
+                            <option value="serieSuperset">Superset</option>
+                            <option value="serieCombinees">Combinées</option>
+                        </select>
+                    </label>
+                    <div ng-show="exercice.typeSerie == 'serieNormales'">
+                        <span style="color:#dedede">Repos (en secondes)</span>         
+                        <label class="item item-input">
+                            <span class="input-label">entre série</span>
+                            <input type="number" ng-model="exercice.ris" style="text-align: right;">
+                        </label>
+                        <label class="item item-input">
+                            <span class="input-label">après l'exercice</span>
+                            <input type="number" ng-model="exercice.repos" style="text-align: right;">
+                        </label>
+                    </div> 
+                </div>
+                <div ng-if="type == 'Cardio'">
+                    
+                </div> 
+                <div ng-if="type == 'Piliers'">
+                    
+                    <label class="item item-input">
+                        <span class="input-label">Durée minimum</span>
+                        <input type="number" ng-model="exercice.dureeMin" style="text-align: right;">
+                    </label>
+                </div> 
+                <div ng-if="type == 'Souplesse'">
+                    <label class="item item-input">
+                        <span class="input-label">A faire de chaque coté ?</span>
+                        <input type="checkbox" ng-model="exercice.chaqueCote" style="text-align: right;">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Durée minimum</span>
+                        <input type="number" ng-model="exercice.dureeMin" style="text-align: right;">
+                    </label>
+                </div>               
+            </div>
+        </div>
+        <button class="button button-full button-positive" ng-click="ajouterExercice();">{{EXO_TXT}}</button>
+        <button class="button button-full button-positive" ng-click="editerSeance()">Editer la séance</button>
+        <div ng-repeat="exo in seance.liste_exos" class="liste">
+            <a class="effacer ion-trash-a" ng-click="delete(exo.id)">&nbsp;</a>
+            <a class="modifier ion-settings" ng-click="edit(exo.id)">&nbsp;</a>
+            <span ng-if="type='Musculation'">{{exo.nom}} : {{exo.nbSeries}}x{{exo.nbReps}} - {{exo.ris}}s puis {{exo.repos}}s</span>
+            <span ng-if="type!='Musculation'">{{exo.nom}} : {{exo.duree}}</span>
+        </div> 
+    </ion-content>
+</ion-view>

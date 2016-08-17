@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>La Méthode, l'unique</title>
+
+        <link href="lib/ionic/css/ionic.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+
+        <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+        <link href="css/ionic.app.css" rel="stylesheet">
+        -->
+
+        <!-- ionic/angularjs js -->
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <script src="lib/angular-route.js"></script>
+
+        <!-- cordova script (this will be a 404 during development) -->
+        <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+        <script src="cordova.js"></script>
+
+        <!-- app's js -->
+        <script src="js/app.js"></script>
+
+        <!-- chrono animation js -->
+        <script src="js/progressbar.js"></script>
+
+        <!-- Controllers -->
+        <script src="js/controllers/configurationController.js"></script>
+
+        <script src="js/controllers/listeExercicesController.js"></script>
+        <script src="js/controllers/creerExerciceController.js"></script>
+        <script src="js/controllers/modifierExerciceController.js"></script>
+
+        <script src="js/controllers/listeSeancesController.js"></script>
+        <script src="js/controllers/creerSeanceController.js"></script>
+        <script src="js/controllers/editerSeanceController.js"></script>   
+             
+        <script src="js/controllers/effectuerSeanceController.js"></script>
+        <script src="js/controllers/voirSeancesController.js"></script>
+        <script src="js/controllers/voirSeanceController.js"></script>
+        
+        <script src="js/controllers/testController.js"></script>
+    </head>
+    <body ng-app="app">
+        <ion-pane>
+            <ion-nav-bar class="bar-dark">
+                <ion-nav-back-button class="button-clear">
+                    <i class="ion-arrow-left-c"></i>
+                </ion-nav-back-button>
+            </ion-nav-bar>
+            <ion-nav-view></ion-nav-view>
+        </ion-pane>
+    </body>
+</html>

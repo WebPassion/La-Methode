@@ -1,0 +1,17 @@
+<ion-view ng-init="chargerLaSeance()">
+	<ion-nav-title>
+      {{title}}
+    </ion-nav-title>
+    <ion-content>
+    	<div ng-repeat="exo in seance.liste_exos">
+            <div class="row">
+                <div class="col">{{exo.nom}} - Mode min/max: {{stats.boucles[stats.nbBoucle].exos[$index].modeMin}}/{{stats.boucles[stats.nbBoucle].exos[$index].modeMax}} - Max reps: {{stats.boucles[stats.nbBoucle].exos[$index].nbRepsMax}}</div>                
+            </div>
+            <div class="row">
+        		<div ng-repeat="serie in historiqueSeance[$index].lesSeries" class="col button {{color[serie.ressenti]}}">
+        			{{serie.nbRepsEffectue}}
+        		</div>
+            </div>
+    	</div>     
+    </ion-content>
+</ion-view>

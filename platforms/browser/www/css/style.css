@@ -1,0 +1,116 @@
+/* règle generales */
+.clear
+{
+    clear: both;
+}
+.left
+{
+    float : left;
+}
+.right
+{
+    float : right;
+}
+
+.alignLeft
+{
+  text-align: left;
+}
+
+.alignRight
+{
+  text-align: right;
+}
+
+
+.row{
+  width: 100%;
+  color:#dedede;
+}
+
+.liste{
+  height: 40px;
+  width: 100%;
+  margin-top:3px;
+  background: #1c1c1c;
+  line-height: 40px;
+  color:#dedede;
+}
+
+.liste span, .liste a{padding-left: 10px; text-decoration: none;}
+
+.liste .voir, .liste .effacer, .liste .modifier{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  color:#dedede;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 0;
+}
+.voir{background: #0B78C2;}
+.effacer{background: #e14848;}
+.modifier{background: #FF8600;}
+
+/* Background */
+.pane {background:#2b2b2b; width: 100%;}
+
+/* Les cercles */
+.cercle-mini
+{
+    height: 50px; width: 50px; 
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    text-align: center;
+    margin: 0 auto;
+}
+.cercle
+{
+    height: 120px; width: 120px; 
+    -moz-border-radius: 60px;
+    -webkit-border-radius: 60px;
+    text-align: center;
+}
+
+/* Effectuer une seance */
+.nbrep
+{
+    border: 6px solid #29ABD6;
+    color: #dedede;
+    background-color: #030303; 
+    font-size: 12px;
+    margin: 5px auto;
+    padding-top : 40px;
+}
+.nbRepsEffectue
+{
+    color: #dedede;
+}
+.plus, .moins
+{
+    color: #dedede;
+    background-color: #030303; 
+    font-size: 15px;
+    border-color : 1px solid black;
+    line-height: 50px;
+}
+.horloge{color: #dedede; font-size : 15px; margin-top: 10px;}
+/* animation chrono */
+
+#container {
+  width: 120px;
+  height: 120px;
+  margin : 5px auto;
+  position: relative;
+}
+#inside
+{
+  width: 120px;
+  height: 120px;
+  color: #dedede;
+  text-align: center;
+  line-height: 120px;
+  position: absolute;
+  top:0;
+  left:0;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "LaMethode",
+  "app_id": "b7f93e08",
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "12.41.296.5"
+    }
+  ]
+}

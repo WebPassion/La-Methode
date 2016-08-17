@@ -1,0 +1,19 @@
+<ion-view view-title="Créer un exercice" ng-init="init()">
+    <ion-content>    	
+    	<div class="list">
+			<label class="item item-input">
+				<input type="text" ng-model="exercice.nomExo" placeholder="Nom de l'exercice">
+			</label>
+			<ion-item>
+			  	<ion-label floating>Description</ion-label>
+			  	<textarea ngModel="exercice.description" style="width:100vw;"></textarea>
+			</ion-item>
+			<button class="button button-full button-positive" ng-click="addImage()">Prendre une photo</button>
+			<button class="button button-full button-positive" ng-click="addGalerie()">Depuis la galerie</button>
+			<div class="row">
+				<img ng-src="{{exercice.image}}" height="200px"/>
+			</div>
+			<button class="button button-full button-positive" ng-click="creer()">Créer l'exercice</button>
+		</div>
+    </ion-content>
+</ion-view>

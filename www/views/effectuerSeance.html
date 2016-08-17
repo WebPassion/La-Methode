@@ -1,0 +1,53 @@
+<ion-view ng-init="chargerSeance()">
+    <ion-nav-title>
+      {{title}}
+    </ion-nav-title>
+    <ion-content>
+        <div style="background: url({{seance.liste_exos[exoEnCours].img}}); position:relative; width:100vw; height:200px; ">
+            <div class="detail" ng-show="more_detail" style="width:100vw; height:170px; position:absolute; top:0; left:0; background: rgba(20,20,20,0.8); color: #dedede;">
+            {{seance.liste_exos[exoEnCours].description}}
+            </div>                    
+            <div class="row" style="height:30px; line-height: 20px; position:absolute; top:170px; left:0; background: rgba(20,20,20,0.8); color: #dedede;">
+                <div class="col">{{HORLOGE}}</div>
+                <div class="col alignRight" ng-click="changeMoreDetail()">Details</div>
+            </div>
+        </div>
+        <div class="row" ng-if="stats.boucles[stats.nbBoucle].nbSeances != 0">
+            <div class="col">Mode min/max: {{stats.boucles[stats.nbBoucle].exos[exoEnCours].modeMin}}/{{stats.boucles[stats.nbBoucle].exos[exoEnCours].modeMax}}</div>
+            <div class="col alignRight">Max reps: {{stats.boucles[stats.nbBoucle].exos[exoEnCours].nbRepsMax}} ({{totalRepsEnCours}})</div>
+        </div>
+        <div id="container" ng-show="reposEnCours">
+            <div id="inside">{{tempsRepos}}</div>
+        </div>
+        <div ng-if="type == 'Musculation'" ng-hide="reposEnCours" class="cercle nbrep">          
+           {{historiqueSeance[exoEnCours].nbRepsAFaire}} répétitions<br>Série {{serieEnCours + 1}}/{{seance.liste_exos[exoEnCours].nbSeries}}
+        </div>
+        <div class="button-bar" ng-show="afficherTAS">            
+            <a class="button {{classTAS[exoEnCours][0]}}" ng-click="tas(1)">MB</a>
+            <a class="button {{classTAS[exoEnCours][1]}}" ng-click="tas(2)">DB</a>
+            <a class="button {{classTAS[exoEnCours][2]}}" ng-click="tas(3)">Ascension</a>            
+        </div>
+        <div class="button-bar" ng-show="afficherTAS">            
+            <a class="button {{classTAS[exoEnCours][3]}}" ng-click="tas(4)">ODT</a>
+            <a class="button {{classTAS[exoEnCours][4]}}" ng-click="tas(5)">Demi-Mode</a>
+            <a class="button {{classTAS[exoEnCours][5]}}" ng-click="tas(6)">Tier-Mode</a>
+        </div>
+        <a ng-if="type == 'Musculation'" ng-hide="reposEnCours" class="button button-full button-positive" ng-click="suivant()">{{NOM_NEXT}}</a>        
+        <div class="button-bar" ng-show="afficherNbRep">
+            <a class="button button-balanced" ng-click="ressenti(0)">Facile</a>
+            <a class="button button-energized" ng-click="ressenti(1)">Moyen</a>
+            <a class="button button-assertive" ng-click="ressenti(2)">Dur</a>
+        </div>
+        <div class="row" ng-show="afficherNbRep">
+            <div class="col">
+                <div class="cercle-mini moins" ng-click="moins()">-</div>
+            </div>
+            <div class="col button {{color[historiqueSeance[exoEnCours].lesSeries[serieEnCours - 1].ressenti]}}" style="text-align: center;">
+                {{historiqueSeance[exoEnCours].lesSeries[serieEnCours - 1].nbRepsEffectue}} / {{historiqueSeance[exoEnCours].nbRepsAFaire}}
+            </div>
+            <div class="col">
+                <div class="cercle-mini plus" ng-click="plus()">+</div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
